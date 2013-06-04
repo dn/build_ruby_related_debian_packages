@@ -26,7 +26,7 @@ time (./configure --prefix=/opt/rubies/ruby-2.0.0-p195 && make && make install D
   -d "libyaml-0-2 (>= 0.1.3)" \
   opt/rubies/ruby-2.0.0-p195
 
-cd /root/ruby-2.0.0-p195/*.deb /home/vagrant
+cp /root/ruby-2.0.0-p195/*.deb /home/vagrant
 
 # Download chruby, compile it and make a package
 cd /root

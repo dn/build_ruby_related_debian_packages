@@ -2,5 +2,4 @@
 
 * vagrant up
 * wait until provision is done
-* find packages in /home/vagrant/
-* scp -P 2200 vagrant@localhost:/home/vagrant/*.deb .
+* scp -P 2200 "vagrant@localhost:/home/vagrant/*.deb" debs/
