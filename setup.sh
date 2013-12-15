@@ -2,8 +2,8 @@
 
 export DEBIAN_FRONTEND=noninteractive
 
-export RUBY_VERSION=2.0.0-p247
-export CHRUBY_VERSION=0.3.7
+export RUBY_VERSION=2.0.0-p353
+export CHRUBY_VERSION=0.3.8
 
 # Prepare system to build .deb packages and compile ruby
 apt-get update -y
