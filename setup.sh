@@ -2,7 +2,10 @@
 
 export DEBIAN_FRONTEND=noninteractive
 
-export RUBY_VERSION=2.0.0-p353
+export RUBY_MAJOR_VERSION=2
+export RUBY_MINOR_VERSION=1
+export RUBY_TEENY_VERSION=2
+export RUBY_VERSION="$RUBY_MAJOR_VERSION.$RUBY_MINOR_VERSION.$RUBY_TEENY_VERSION"
 export CHRUBY_VERSION=0.3.8
 
 # Prepare system to build .deb packages and compile ruby
@@ -12,9 +15,8 @@ apt-get install build-essential openssl libreadline6 libreadline6-dev zlib1g zli
 apt-get install ruby rubygems -y
 gem1.8 install fpm --no-ri --no-rdoc
 
-
 # Download ruby, compile it and make a package
-wget ftp://ftp.ruby-lang.org/pub/ruby/2.0/ruby-$RUBY_VERSION.tar.gz -O /root/ruby-$RUBY_VERSION.tar.gz
+wget ftp://ftp.ruby-lang.org/pub/ruby/$RUBY_MAJOR_VERSION.$RUBY_MINOR_VERSION/ruby-$RUBY_VERSION.tar.gz -O /root/ruby-$RUBY_VERSION.tar.gz
 cd /root
 tar -zxvf ruby-$RUBY_VERSION.tar.gz
 cd /root/ruby-$RUBY_VERSION

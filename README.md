@@ -2,4 +2,4 @@
 
 * vagrant up
 * wait until provision is done
-* scp -P 2200 "vagrant@localhost:/home/vagrant/*.deb" debs/
+* scp -P 2222 "vagrant@localhost:/home/vagrant/*.deb" debs/

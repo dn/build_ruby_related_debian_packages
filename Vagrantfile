@@ -9,6 +9,6 @@ Vagrant.configure("2") do |config|
   end
   #config.vm.customize ["modifyvm", :id, "--ioapic", "on"]
 
-  config.vm.box = "precise64"
+  config.vm.box = "ubuntu/precise64"
   config.vm.provision :shell, :path => "setup.sh"
 end
