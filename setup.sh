@@ -23,8 +23,8 @@ cd /root/ruby-$RUBY_VERSION
 time (./configure --prefix=/opt/rubies/ruby-$RUBY_VERSION && make && make install DESTDIR=/tmp/ruby)
 
 ## build the .deb
-/usr/local/bin/fpm -s dir -t deb -n ruby -v $RUBY_VERSION --description "Self-packaged Ruby #{RUBY_VERSION}" -C /tmp/ruby \
-  -p ruby-VERSION_ARCH.deb -d "libstdc++6 (>= 4.4.3)" \
+/usr/local/bin/fpm -s dir -t deb -n ruby$RUBY_MAJOR_VERSION.$RUBY_MINOR_VERSION -v $RUBY_VERSION --description "Self-packaged Ruby #{RUBY_VERSION}" -C /tmp/ruby \
+  -p ruby$RUBY_MAJOR_VERSION.$RUBY_MINOR_VERSION-VERSION_ARCH.deb -d "libstdc++6 (>= 4.4.3)" \
   -d "libc6 (>= 2.6)" -d "libffi6 (>= 3.0.4)" -d "libgdbm3 (>= 1.8.3)" \
   -d "libncurses5 (>= 5.7)" -d "libreadline6 (>= 6.1)" \
   -d "libssl0.9.8 (>= 0.9.8)" -d "zlib1g (>= 1:1.2.2)" \
